@@ -7,7 +7,5 @@ import com.mizerani.app.domain.Categoria;
 
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Integer> {
-
-	
 	
 }
