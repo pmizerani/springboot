@@ -7,20 +7,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mizerani.demo.domain.Categoria;
-import com.mizerani.demo.services.CategoriaService;
+import com.mizerani.demo.domain.Pedido;
+import com.mizerani.demo.services.PedidoService;
 
 @RestController
-@RequestMapping(value="/categorias")
-public class CategoriaResource {
+@RequestMapping(value="/pedidos")
+public class PedidoResource {
 
 	@Autowired
-	private CategoriaService categoriaService;
+	private PedidoService pedidoService;
 	
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	public ResponseEntity<?> find(@PathVariable Integer id) {
 		
-		Categoria obj = categoriaService.buscar(id);
+		Pedido obj = pedidoService.buscar(id);
 
 		return ResponseEntity.ok().body(obj);
 		
