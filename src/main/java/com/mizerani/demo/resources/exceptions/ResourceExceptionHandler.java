@@ -1,4 +1,4 @@
-package com.mizerani.demo.resources.exception;
+package com.mizerani.demo.resources.exceptions;
 
 import com.mizerani.demo.services.exceptions.DataIntegrityException;
 import com.mizerani.demo.services.exceptions.ObjectNotFoundException;

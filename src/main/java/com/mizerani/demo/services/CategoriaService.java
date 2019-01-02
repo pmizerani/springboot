@@ -1,6 +1,7 @@
 package com.mizerani.demo.services;
 
 import com.mizerani.demo.domain.Categoria;
+import com.mizerani.demo.dto.CategoriaDTO;
 import com.mizerani.demo.repositories.CategoriaRepository;
 import com.mizerani.demo.services.exceptions.DataIntegrityException;
 import com.mizerani.demo.services.exceptions.ObjectNotFoundException;
@@ -52,4 +53,9 @@ public class CategoriaService {
 		PageRequest pageRequest = PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy);
 		return categoriaRepository.findAll(pageRequest);
 	}
+
+	public Categoria fromDTO(CategoriaDTO categoriaDTO) {
+		return new Categoria(categoriaDTO.getId(), categoriaDTO.getNome());
+	}
+
 }

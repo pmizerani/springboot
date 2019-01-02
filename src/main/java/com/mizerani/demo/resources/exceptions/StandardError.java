@@ -1,4 +1,4 @@
-package com.mizerani.demo.resources.exception;
+package com.mizerani.demo.resources.exceptions;
 
 import java.io.Serializable;
 
