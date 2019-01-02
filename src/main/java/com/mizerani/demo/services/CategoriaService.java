@@ -18,5 +18,9 @@ public class CategoriaService {
 		Optional<Categoria> obj = categoriaRepository.findById(id);
 		return obj.orElse(null);
 	}
-	
+
+     public Categoria insert(Categoria obj) {
+		obj.setId(null);
+		return categoriaRepository.save(obj);
+     }
 }
